@@ -1,7 +1,7 @@
-// Дополнительный импорт стилей
-import "simplelightbox/dist/simple-lightbox.min.css";
 // Описан в документации
 import SimpleLightbox from "simplelightbox"
+// Дополнительный импорт стилей
+import "simplelightbox/dist/simple-lightbox.min.css";
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
@@ -37,7 +37,7 @@ const captionOptions = {
     captionsData: 'alt',//получить заголовок из данного атрибута
     captionPosition: 'bottom',//положение подписи. Возможны следующие варианты: верх, низ или снаружи
     captionDelay: 250,//добавляет задержку перед отображением заголовка (в мс)
-    //enableKeyboard: true,//разрешить навигацию со стрелками на клавиатуре и закрыть клавишей ESC
+    enableKeyboard: true,//разрешить навигацию со стрелками на клавиатуре и закрыть клавишей ESC
     uniqueImages: true,//нужно ли делать изображения уникальными или нет
    };//Создание объекта
    list.addEventListener(`click`, GalleryItemClick);
