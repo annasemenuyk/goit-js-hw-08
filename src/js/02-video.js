@@ -1,7 +1,7 @@
 // Ознакомься с документацией библиотеки Vimeo плеера.
 // Добавь библиотеку как зависимость проекта через npm.
-import throttle from 'lodash.throttle'
-import Player from '@vimeo/player'
+import throttle from 'lodash.throttle';
+import Player from '@vimeo/player';
 // Инициализируй плеер в файле скрипта как это описано в секции pre-existing player,
 // но учти что у тебя плеер добавлен как npm пакет, а не через CDN.
 const iframe = document.getElementById('vimeo-player');
@@ -13,6 +13,7 @@ const player = new Player(iframe);
  function onPlay (data) {
     localStorage.setItem('videoplayer-current-time', JSON.stringify(data))  // data is an object containing properties specific to that event
 };
+
 player.on('timeupdate', throttle(onPlay, 500));
  player.setCurrentTime(getCurrentTime())
 function getCurrentTime() {
